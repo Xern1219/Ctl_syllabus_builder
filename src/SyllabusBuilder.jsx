@@ -563,11 +563,13 @@ export default function SyllabusBuilder() {
             <Field label="Room"><T value={d.location} onChange={(v) => set("location", v)} placeholder="Humanities 407" /></Field>
             <Field label="Other Meeting Room" hint="Only fill this if some classes take place in other room during the week"><T value={d.exlocation} onChange={(v) => set("exlocation", v)} placeholder="Humanities 409 on Fridays" /></Field>
             <Field label="Department"><select style={inputBase} value={d.debt} onChange={(v) => set("dept", v.target.value)}>
-                {["[Enter Department Here]", "Agriculture, Geosciences, and Natural Resources", "Family and Consumer Sciences", "Military Science and Leadership", 
-                  "School of Business",
-                   "Behavioral Sciences", "Educational Studies", "Health and Human Performance","Interdisciplinary Studies", "Nursing", "Psychology",
-                   "Biological Sciences", "Chemistry and Physics", "Computer Science", "Engineering", "Mathematics and Statistics",
-                   "English and Modern Foreign Languages", "History and Philosophy", "Mass Media and Strategic Communication", "Music", "Political Science and Global Studies", "Visual and Theatre Arts"].map((m) => <option key={m}>{m}</option>)}
+                {["[Enter Department Here]", "Agriculture, Geosciences, and Natural Resources", "Behavioral Sciences",
+                "Biological Sciences", "Chemistry and Physics", "Computer Science", "Educational Studies", "Engineering", 
+                "English and Modern Foreign Languages", "Family and Consumer Sciences", "Health and Human Performance", 
+                "History and Philosophy", "Interdisciplinary Studies", "Mass Media and Strategic Communication", 
+                "Mathematics and Statistics", "Military Science and Leadership", "Music", "Nursing", "Psychology", 
+                "Political Science and Global Studies", "School of Business", 
+                "Visual and Theatre Arts"].map((m) => <option key={m}>{m}</option>)}
               </select>
               </Field>
             <Field label="Prerequisites"><T value={d.prereq} onChange={(v) => set("prereq", v)} placeholder="None" /></Field>
